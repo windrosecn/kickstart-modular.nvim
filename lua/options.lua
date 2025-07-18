@@ -7,15 +7,15 @@ vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
 -- Basic settings
 vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
-vim.opt.cursorline = true -- Highlight current line
 vim.opt.wrap = false -- Don't wrap lines
 vim.opt.scrolloff = 10 -- Keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 8 -- Keep 8 columns left/right of cursor
 
 -- Indentation
-vim.opt.tabstop = 2 -- Tab width
-vim.opt.shiftwidth = 2 -- Indent width
-vim.opt.softtabstop = 2 -- Soft tab stop
+vim.opt.breakindent = true
+-- vim.opt.tabstop = 2 -- Tab width
+-- vim.opt.shiftwidth = 2 -- Indent width
+-- vim.opt.softtabstop = 2 -- Soft tab stop
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Smart auto-indenting
 vim.opt.autoindent = true -- Copy indent from current line
@@ -64,11 +64,12 @@ vim.opt.iskeyword:append '-' -- Treat dash as part of word
 vim.opt.path:append '**' -- include subdirectories in search
 vim.opt.selection = 'exclusive' -- Selection behavior
 vim.opt.mouse = 'a' -- Enable mouse support
--- vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
+vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
 vim.opt.modifiable = true -- Allow buffer modifications
 vim.opt.encoding = 'UTF-8' -- Set encoding
 
 -- Cursor settings
+vim.opt.cursorline = true -- Highlight current line
 vim.opt.guicursor =
   'n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
 
